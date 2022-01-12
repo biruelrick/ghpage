@@ -1,0 +1,9 @@
+{
+  "name": "react-pure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "homepage": "https://biruelrick.github.io/ghpage",
+  "repository": "git@github.com:biruelrick/ghpage.git",
+  "license": "MIT",
+  "private": true
+}
