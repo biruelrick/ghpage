@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">React Not Render</div>
+
+  <!--  <script src="https://unpkg.com/browse/react@17.0.2/umd/react.development.js"></script>-->
+  <!--  <script src="https://unpkg.com/browse/react-dom@17.0.2/umd/react-dom.development.js"></script>-->
+  <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+  <script>
+
+    const Person = props => {
+
+      return React.createElement('div', {}, [
+        React.createElement('h2', {style: {backgroundColor: 'black', color: 'white'}}, props.name),
+        React.createElement('h3', {}, props.email),
+      ]);
+    };
+
+    const App = () => {
+
+      return React.createElement(
+          'div',
+          {style: {backgroundColor: '#c0c0c0', color: 'red'}}, [
+            React.createElement('h1', {}, 'Hello React World!'),
+            React.createElement(Person, {name: 'Ricardo Biruel', email: 'r@r.com.br'}),
+            React.createElement(Person, {name: 'Ane', email: 'a@a.com.br'}),
+            React.createElement(Person, {name: 'Nini', email: 'n@n.com.br'}),
+            React.createElement(Person, {name: 'Caca', email: 'c@c.com.br'}),
+          ],
+      );
+    };
+
+    ReactDOM.render(React.createElement(App), document.getElementById('root'));
+
+  </script>
+</body>
+</html>
